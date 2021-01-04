@@ -1,65 +1,72 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+
+// Adopt: https://fa3wxlp4uv4.typeform.com/to/BbwkQs0U
 
 export default function Home() {
+  const selectedStyle = {
+    backgroundImage: "linear-gradient(to right, #00d2ff, #3a7bd5)",
+    color: "white",
+  };
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Stello | Telescope Adoption</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <table style={{ width: "100%" }}>
+          <tr>
+            <td
+              style={selectedStyle}
+              onClick={() => {
+                document.getElementById("projects").style.backgroundImage =
+                  "linear-gradient(to right, #00d2ff, #3a7bd5)";
+                document.getElementById("projects").style.color = "white";
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+                document.getElementById(
+                  "experiences"
+                ).style.backgroundImage = null;
+                document.getElementById("experiences").style.color = "black";
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                setContent(projects);
+                console.log(content);
+              }}
+              id="projects"
+            >
+              Projects
+            </td>
+            <td
+              onClick={() => {
+                document.getElementById(
+                  "projects"
+                ).style.backgroundImage = null;
+                document.getElementById("projects").style.color = "black";
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                document.getElementById("experiences").style.backgroundImage =
+                  "linear-gradient(to right, #00d2ff, #3a7bd5)";
+                document.getElementById("experiences").style.color = "white";
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+                setContent(experiences);
+                console.log(content);
+              }}
+              id="experiences"
+            >
+              Experience
+            </td>
+          </tr>
+        </table>
       </main>
-
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/pranavnt/adopt.stello.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Made with ❤️ by Stello
         </a>
       </footer>
     </div>
-  )
+  );
 }

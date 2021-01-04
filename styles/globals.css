@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+table {
+  table-layout: fixed;
+}
+
+td {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+td:hover {
+  background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: white;
+}
+
+ul {
+  font-size: 20px;
+  line-height: 30px;
+}
