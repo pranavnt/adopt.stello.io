@@ -37,7 +37,7 @@ export default function Home() {
                   ).style.backgroundImage = null;
                   document.getElementById("donate").style.color = "black";
 
-                  setUrl();
+                  setUrl("https://fa3wxlp4uv4.typeform.com/to/BbwkQs0U");
                 }}
                 id="adopt"
               >
@@ -52,7 +52,7 @@ export default function Home() {
                     "linear-gradient(to right, #00d2ff, #3a7bd5)";
                   document.getElementById("donate").style.color = "white";
 
-                  setUrl();
+                  setUrl("https://fa3wxlp4uv4.typeform.com/to/u1TrfZls");
                 }}
                 id="donate"
               >
