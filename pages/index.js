@@ -21,39 +21,29 @@ export default function Home() {
             <td
               style={selectedStyle}
               onClick={() => {
-                document.getElementById("projects").style.backgroundImage =
+                document.getElementById("adopt").style.backgroundImage =
                   "linear-gradient(to right, #00d2ff, #3a7bd5)";
-                document.getElementById("projects").style.color = "white";
+                document.getElementById("adopt").style.color = "white";
 
-                document.getElementById(
-                  "experiences"
-                ).style.backgroundImage = null;
-                document.getElementById("experiences").style.color = "black";
-
-                setContent(projects);
-                console.log(content);
+                document.getElementById("donate").style.backgroundImage = null;
+                document.getElementById("donate").style.color = "black";
               }}
-              id="projects"
+              id="adopt"
             >
-              Projects
+              Adopt
             </td>
             <td
               onClick={() => {
-                document.getElementById(
-                  "projects"
-                ).style.backgroundImage = null;
-                document.getElementById("projects").style.color = "black";
+                document.getElementById("adopt").style.backgroundImage = null;
+                document.getElementById("adopt").style.color = "black";
 
-                document.getElementById("experiences").style.backgroundImage =
+                document.getElementById("donate").style.backgroundImage =
                   "linear-gradient(to right, #00d2ff, #3a7bd5)";
-                document.getElementById("experiences").style.color = "white";
-
-                setContent(experiences);
-                console.log(content);
+                document.getElementById("donate").style.color = "white";
               }}
-              id="experiences"
+              id="donate"
             >
-              Experience
+              Donate
             </td>
           </tr>
         </table>
